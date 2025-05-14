@@ -1,0 +1,135 @@
+/* ─── Theme Variables ───────────────────────────────────── */
+:root {
+  /* ─ Home (Top Panel) ─────────────────────────────────── */
+  --page-bg-home:      #C6E6F8; /* Light Sky Blue */
+  --banner-text-home:  #1E1E24; /* Deep Charcoal Black */
+
+  /* ─ Skills (Middle Panel) ───────────────────────────── */
+  --page-bg-skills:          #5D8AA8; /* Steel Blue */
+  --banner-text-skills:      #1E1E24; /* Deep Charcoal Black */
+  --skill-sidebar-bg:        #FDFDFD; /* Off White */
+  --skill-detail-bg:         #A5C5D7; /* Soft Desaturated Blue */
+  --progress-fill:           #1E2A38; /* Charcoal Navy */
+
+  /* ─ Projects (Bottom Panel) ────────────────────────── */
+  --page-bg-projects:        #2D4C57; /* Deep Teal Blue */
+  --banner-text-projects:    #FFFFFF; /* White */
+
+  /* ─ Buttons ─────────────────────────────────────────── */
+  --btn-bg:     #1E2A38; /* Charcoal Navy */
+  --btn-text:   #FFFFFF; /* White */
+
+  /* ─ Project Cards (examples) ────────────────────────── */
+  --project-card-contact-bg: #EAEFF1; /* Pale Ivory */
+  --project-card-js-bg:      #F5F5F5; /* Soft White */
+  --project-card-text-dark:  #1E1E24; /* Deep Charcoal Black */
+  --project-card-text-light: #FFFFFF; /* White */
+}
+
+/* ─── Base Reset for Backgrounds ───────────────────────── */
+body {
+  background: none; /* moved to .site-content */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--banner-text-home); /* fallback */
+}
+.site-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--page-bg); /* overridden per page below */
+}
+
+/* ─── Header / Nav ───────────────────────────────────── */
+header {
+  background-color: var(--page-bg);
+  color: var(--banner-text);
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  padding: 2rem 4rem;
+  display: flex; justify-content: space-between; align-items: center;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.logo, .navmenu a {
+  color: var(--banner-text);
+}
+
+/* ─── Button Styles ───────────────────────────────────── */
+.btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.btn:hover {
+  background-color: rgba(30, 42, 56, 0.85);
+}
+
+/* ─── Hero Sections (banner + main) ──────────────────── */
+/* Home & Skills keep the old blanket text color */
+.home,
+main.skills-page {
+  background-color: var(--page-bg);
+  color: var(--banner-text);
+}
+
+/* Projects only gets the background here */
+main.projects-page {
+  background-color: var(--page-bg);
+}
+/* And only its page title stays white */
+main.projects-page .page-title {
+  color: var(--banner-text);
+}
+
+/* ─── Per-Page Variable Overrides ─────────────────────── */
+/* Home page */
+body.home-page {
+  --page-bg: var(--page-bg-home);
+  --banner-text: var(--banner-text-home);
+}
+/* Skills page */
+body.skills-page {
+  --page-bg: var(--page-bg-skills);
+  --banner-text: var(--banner-text-skills);
+}
+/* Projects page */
+body.projects-page {
+  --page-bg: var(--page-bg-projects);
+  --banner-text: var(--banner-text-projects);
+}
+
+/* ─── Skills Specific Overrides ───────────────────────── */
+/* Sidebar skill cards */
+.skills-sidebar .skill-card {
+  background-color: var(--skill-sidebar-bg);
+}
+/* Detail‐pane cards */
+.skills-detail .detail-card {
+  background-color: var(--skill-detail-bg);
+}
+/* Progress‐bar fill */
+.progress-bar {
+  background-color: var(--progress-fill);
+}
+
+/* ─── Project Card Helpers ───────────────────────────── */
+/* Example: “Contact Me” card */
+.project-card--contact {
+  background-color: var(--project-card-contact-bg);
+  color: var(--project-card-text-dark);
+}
+/* Example: JavaScript project card */
+.project-card[data-category="js"] {
+  background-color: var(--project-card-js-bg);
+  color: var(--project-card-text-dark);
+}
+
+/* If you need a light‐text card on the dark background: */
+.project-card.light-text {
+  color: var(--project-card-text-light);
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects • Alexander Paterson</title>
+
+  <!-- Phosphor Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+   <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Page-specific -->
+  <link rel="stylesheet" href="css/projects.css" />
+</head>
+<body class="projects-page">
+  <div class="site-content">
+    <!-- Header / Nav -->
+    <header>
+      <a href="index.html" class="logo">Alexander Paterson.</a>
+      <nav class="navmenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Projects Main -->
+    <main class="projects-page">
+      <h1 class="page-title">Projects</h1>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="js">JS</button>
+        <button class="filter-btn" data-filter="java">Java</button>
+        <button class="filter-btn" data-filter="cpp">C++</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="personal">Personal</button>
+        <button class="filter-btn" data-filter="university">University</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Example JS Project -->
+        <div class="project-card" data-category="js">
+          <div class="card-img">
+            <img src="assets/projects/js-app.png" alt="JS App Screenshot">
+          </div>
+          <h3>Interactive To-Do App</h3>
+          <p>A React/Node.js single-page app with real-time updates.</p>
+          <div class="card-btns">
+            <a href="https://your-js-app.vercel.app" class="btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/APaterson012/js-todo-app" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <!-- Example Java Project -->
+        <div class="project-card" data-category="java">
+          <div class="card-img">
+            <img src="assets/projects/java-android.png" alt="Android App">
+          </div>
+          <h3>Campus Events Android App</h3>
+          <p>Java app for students to browse and RSVP to events.</p>
+          <div class="card-btns">
+            <a href="https://github.com/APaterson012/campus-events-app" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <!-- Example C++ Project -->
+        <div class="project-card" data-category="cpp">
+          <div class="card-img">
+            <img src="assets/projects/cpp-engine.png" alt="Physics Engine">
+          </div>
+          <h3>Game Physics Engine</h3>
+          <p>Custom C++ module handling rigid-body collisions.</p>
+          <div class="card-btns">
+            <a href="https://github.com/APaterson012/physics-engine" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <!-- Example Python Project -->
+        <div class="project-card" data-category="python">
+          <div class="card-img">
+            <img src="assets/projects/python-scraper.png" alt="Web Scraper">
+          </div>
+          <h3>Web-Scraping Bot</h3>
+          <p>Python script collecting and visualizing product data.</p>
+          <div class="card-btns">
+            <a href="https://github.com/APaterson012/web-scraper" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <!-- Personal Project -->
+        <div class="project-card" data-category="personal">
+          <div class="card-img">
+            <img src="assets/projects/vday-cards.png" alt="Valentine's Cards">
+          </div>
+          <h3>Valentine’s e-Cards</h3>
+          <p>Customizable HTML/CSS e-cards generator.</p>
+          <div class="card-btns">
+            <a href="https://your-vday-cards.github.io" class="btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/APaterson012/vday-cards" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <!-- University Project -->
+        <div class="project-card" data-category="university">
+          <div class="card-img">
+            <img src="assets/projects/care-home.png" alt="Care Home App">
+          </div>
+          <h3>Smart Care‐Home Web App</h3>
+          <p>Full stack energy management system (React &amp; Node.js).</p>
+          <div class="card-btns">
+            <a href="https://care-home-app.vercel.app" class="btn" target="_blank">Live Demo</a>
+            <a href="https://github.com/APaterson012/care-home" class="btn" target="_blank">Source</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div><!-- /.site-content -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/alexander-paterson-60aaab214/" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
+      <a href="https://github.com/APaterson012" target="_blank"><i class="ph ph-github-logo"></i></a>
+    </div>
+  </footer>
+
+  <!-- Page-specific JS -->
+  <script src="js/projects.js"></script>
+</body>
+</html>

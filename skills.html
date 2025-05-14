@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills • Alexander Paterson</title>
+
+  <!-- Phosphor Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles -->
+   <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Page-specific overrides -->
+  <link rel="stylesheet" href="css/skills.css" />
+</head>
+<body class="skills-page">
+  <div class="site-content">
+    <!-- Header / Nav -->
+    <header>
+      <a href="index.html" class="logo">Alexander Paterson.</a>
+      <nav class="navmenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Skills Section -->
+    <main class="skills-page">
+      <h1 class="page-title">Skills</h1>
+
+      <div class="skills-grid">
+        <!-- Sidebar of language & tech cards -->
+        <aside class="skills-sidebar">
+          <div class="skill-card active" data-skill="python">
+            <i class="ph ph-python-logo"></i><span>Python</span>
+          </div>
+          <div class="skill-card" data-skill="cplusplus">
+            <i class="ph ph-c-plus-plus-logo"></i><span>C++</span>
+          </div>
+          <div class="skill-card" data-skill="java">
+            <i class="ph ph-java-logo"></i><span>Java</span>
+          </div>
+          <div class="skill-card" data-skill="javascript">
+            <i class="ph ph-js-logo"></i><span>JavaScript</span>
+          </div>
+          <div class="skill-card" data-skill="htmlcss">
+            <i class="ph ph-code"></i><span>HTML &amp; CSS</span>
+          </div>
+          <div class="skill-card" data-skill="react">
+            <i class="ph ph-react-logo"></i><span>React</span>
+          </div>
+          <div class="skill-card" data-skill="nodejs">
+            <i class="ph ph-node-logo"></i><span>Node.js</span>
+          </div>
+          <div class="skill-card" data-skill="sql">
+            <i class="ph ph-database-logo"></i><span>SQL</span>
+          </div>
+          <div class="skill-card" data-skill="docker">
+            <i class="ph ph-docker-logo"></i><span>Docker</span>
+          </div>
+          <div class="skill-card" data-skill="git">
+            <i class="ph ph-git-logo"></i><span>Git</span>
+          </div>
+          <div class="skill-card" data-skill="ai">
+            <i class="ph ph-brain-logo"></i><span>AI Fundamentals</span>
+          </div>
+          <div class="skill-card" data-skill="csfund">
+            <i class="ph ph-bug-logo"></i><span>Algorithms &amp; DS</span>
+          </div>
+        </aside>
+
+        <!-- Detail panes stack -->
+        <div class="skills-detail">
+          <!-- 1) Technology Detail (dynamic) -->
+          <div class="detail-card tech-detail">
+            <h2 id="skill-title">Python</h2>
+            <div class="progress-container">
+              <div class="progress-bg">
+                <div class="progress-bar" id="skill-bar" data-value="80"></div>
+              </div>
+            </div>
+            <ul id="skill-list">
+              <li>Data analysis tool using Pandas &amp; Matplotlib</li>
+              <li>Web-scraping bots with BeautifulSoup</li>
+              <li>Flask/Django REST API</li>
+            </ul>
+            <a href="projects.html" class="btn">View Projects</a>
+          </div>
+
+          <!-- 2) CS Fundamentals (static) -->
+          <div class="detail-card cs-detail">
+            <h3>CS Fundamentals</h3>
+            <ul>
+              <li>Algorithms &amp; Data Structures</li>
+              <li>Concurrency &amp; Multithreading</li>
+              <li>Secure Coding Practices</li>
+            </ul>
+          </div>
+
+          <!-- 3) Soft Skills (static) -->
+          <div class="detail-card soft-detail">
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Communication</li>
+              <li>Teamwork &amp; Collaboration</li>
+              <li>Problem-Solving</li>
+              <li>Time Management</li>
+              <li>Adaptability &amp; Learning</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div><!-- /.site-content -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/alexander-paterson-60aaab214/" target="_blank">
+        <i class="ph ph-linkedin-logo"></i>
+      </a>
+      <a href="https://github.com/APaterson012" target="_blank">
+        <i class="ph ph-github-logo"></i>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/skills.js"></script>
+</body>
+</html>

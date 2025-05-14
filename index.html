@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Alexander Paterson – Front-end Developer</title>
+
+  <!-- Phosphor Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="home-page">
+  <div class="site-content">
+    <!-- Header / Nav -->
+    <header>
+      <a href="index.html" class="logo">Alexander Paterson.</a>
+      <nav class="navmenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home">
+      <div class="home-text">
+        <h2>Hello I’m Alexander</h2>
+        <h3>Front End Developer</h3>
+        <p>
+          I’m a fourth-year Computer Science student based in Edinburgh,
+          passionate about crafting intuitive user interfaces and
+          exploring the latest web technologies.
+        </p>
+        <div class="home-btns">
+          <a href="contact.html" class="btn">Contact Info</a>
+          <button id="open-cv" class="btn">
+            View CV <i class="ph ph-read-cv-logo"></i>
+          </button>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="assets/Avatar.png" alt="Alexander Paterson" />
+      </div>
+    </section>
+  </div><!-- /.site-content -->
+
+  <!-- Footer (global) -->
+  <footer>
+    <div class="footer-icons">
+      <a
+        href="https://www.linkedin.com/in/alexander-paterson-60aaab214/"
+        target="_blank"
+        aria-label="LinkedIn"
+      ><i class="ph ph-linkedin-logo"></i></a>
+      <a
+        href="https://github.com/APaterson012"
+        target="_blank"
+        aria-label="GitHub"
+      ><i class="ph ph-github-logo"></i></a>
+    </div>
+  </footer>
+
+  <!-- CV Modal -->
+  <div id="cv-modal" class="modal">
+    <div class="modal-content modal-cv">
+      <button id="close-cv" class="modal-close">&times;</button>
+      <iframe src="cv.html" frameborder="0"></iframe>
+    </div>
+  </div>
+
+ <script src="js/main.js"></script>
+</body>
+</html>

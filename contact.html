@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact • Alexander Paterson</title>
+
+  <!-- Phosphor Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"
+  />
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global styles (header, footer, layout, buttons, modal, etc.) -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Contact-page overrides & grid -->
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <div class="site-content">
+    <!-- Header / Nav (fixed by style.css) -->
+    <header>
+      <a href="index.html" class="logo">Alexander Paterson.</a>
+      <nav class="navmenu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Contact Page content wrapped in <main> so style.css 'main { margin-top }' applies -->
+    <main class="contact-page">
+      <!-- LEFT: image strips -->
+      <div class="contact-left">
+        <div class="img-strip"><img src="assets/image1.PNG" alt="Scene 1"></div>
+        <div class="img-strip"><img src="assets/image2.PNG" alt="Scene 2"></div>
+      </div>
+
+      <!-- RIGHT: contact info + form -->
+      <div class="contact-right">
+        <h2>Contact Me</h2>
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="label">Phone:</span>
+            <span class="value">+44 7427 251925</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Email:</span>
+            <span class="value">apaterson012@gmail.com</span>
+          </div>
+        </div>
+
+        <form id="contact-form"
+              class="contact-form"
+              action="https://formsubmit.co/ap2002@hw.ac.uk"
+              method="POST">
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" name="_redirect" value="" />
+          <input type="hidden" name="_subject" value="New message from portfolio" />
+
+          <input type="text"   name="name"    placeholder="Name"    required />
+          <input type="email"  name="email"   placeholder="Email"   required />
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </main>
+  </div><!-- /.site-content -->
+
+  <!-- Thank-you Modal (uses the same .modal styles in style.css) -->
+  <div id="thankyou-modal" class="modal">
+    <div class="modal-content">
+      <p>Thank you for your message! I will reply soon.</p>
+      <button id="close-modal" class="btn">OK</button>
+    </div>
+  </div>
+
+  <!-- Footer (static) -->
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/in/alexander-paterson-60aaab214/" target="_blank">
+        <i class="ph ph-linkedin-logo"></i>
+      </a>
+      <a href="https://github.com/APaterson012" target="_blank">
+        <i class="ph ph-github-logo"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Contact-page JS (AJAX + thank-you modal) -->
+  <script src="js/contact.js"></script>
+</body>
+</html>
