@@ -89,17 +89,25 @@ header {
   max-width: 500px;
   margin-bottom: 2rem;
 }
+.home-btns {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+}
+
 .home-btns .btn {
-  display: inline-block;
+  display: inline-flex;         /* allows centering the icon/text nicely */
+  align-items: center;          /* vertical center contents */
+  justify-content: center;      /* horizontal center, if you like */
+  padding: 1.2rem 1.5rem;        /* ↑ increase top/bottom padding for more height */
   background-color: #1e1e24;
   color: #fff;
-  padding: 0.8rem 1.5rem;
-  margin-right: 1rem;
   border-radius: 0.4rem;
   font-weight: 500;
   text-decoration: none;
   transition: background-color 0.3s, transform 0.3s;
+  min-height: 3.5rem;           /* optional: ensures a consistent minimum height */
 }
+
 .home-btns .btn i {
   margin-left: 0.5rem;
   vertical-align: middle;
