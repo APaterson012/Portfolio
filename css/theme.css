@@ -4,6 +4,10 @@
   --page-bg-home:      #C6E6F8; /* Light Sky Blue */
   --banner-text-home:  #1E1E24; /* Deep Charcoal Black */
 
+  /* ─ Contact (Top Panel) ────────────────────────────────── */
+  --page-bg-contact:     #bd979f; /* Coral Accent for About */
+  --banner-text-contact: #000000; /* White on coral */
+
   /* ─ Skills (Middle Panel) ───────────────────────────── */
   --page-bg-skills:          #5D8AA8; /* Steel Blue */
   --banner-text-skills:      #1E1E24; /* Deep Charcoal Black */
@@ -15,20 +19,18 @@
   --page-bg-projects:        #2D4C57; /* Deep Teal Blue */
   --banner-text-projects:    #FFFFFF; /* White */
 
+  /* ─ About (Extra Panel) ──────────────────────────── */
+  --page-bg-about:         #A3B18A; /* Soft Sage */
+  --banner-text-about:     #1E1E24; /* Deep Charcoal Black */
+
   /* ─ Buttons ─────────────────────────────────────────── */
   --btn-bg:     #1E2A38; /* Charcoal Navy */
   --btn-text:   #FFFFFF; /* White */
-
-  /* ─ Project Cards (examples) ────────────────────────── */
-  --project-card-contact-bg: #EAEFF1; /* Pale Ivory */
-  --project-card-js-bg:      #F5F5F5; /* Soft White */
-  --project-card-text-dark:  #1E1E24; /* Deep Charcoal Black */
-  --project-card-text-light: #FFFFFF; /* White */
 }
 
-/* ─── Base Reset for Backgrounds ───────────────────────── */
+/* ─── Global Reset & Layout ────────────────────────────── */
+html { overflow-y: scroll }
 body {
-  background: none; /* moved to .site-content */
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -39,97 +41,157 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--page-bg); /* overridden per page below */
+  background-color: var(--page-bg);
 }
 
 /* ─── Header / Nav ───────────────────────────────────── */
 header {
-  background-color: var(--page-bg);
-  color: var(--banner-text);
   position: fixed;
   top: 0; left: 0;
   width: 100vw;
-  overflow-x: hidden;
   padding: 2rem 4rem;
-  display: flex; justify-content: space-between; align-items: center;
-  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--page-bg);
+  color: var(--banner-text);
   z-index: 1000;
 }
-.logo, .navmenu a {
-  color: var(--banner-text);
-}
+.logo, .navmenu a { color: var(--banner-text) }
+.navmenu a { margin-left: 1.5rem; font-weight: 500; text-decoration: none; transition: transform .3s }
+.navmenu a:hover { transform: translateY(-3px) }
 
 /* ─── Button Styles ───────────────────────────────────── */
 .btn {
   background-color: var(--btn-bg);
   color: var(--btn-text);
-  transition: background-color 0.3s, transform 0.3s;
+  padding: .8rem 1.5rem;
+  border: none;
+  border-radius: .4rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color .3s, transform .3s;
 }
-.btn:hover {
-  background-color: rgba(30, 42, 56, 0.85);
-}
+.btn:hover { background-color: rgba(30,42,56,0.85); transform: translateY(-2px) }
 
-/* ─── Hero Sections (banner + main) ──────────────────── */
-/* Home & Skills keep the old blanket text color */
+/* ─── Hero & Main Panels ───────────────────────────────── */
 .home,
-main.skills-page {
+main.about-page,
+main.skills-page,
+main.projects-page,
+main.contact-page {
   background-color: var(--page-bg);
   color: var(--banner-text);
 }
 
-/* Projects only gets the background here */
-main.projects-page {
-  background-color: var(--page-bg);
-}
-/* And only its page title stays white */
-main.projects-page .page-title {
-  color: var(--banner-text);
-}
-
-/* ─── Per-Page Variable Overrides ─────────────────────── */
-/* Home page */
+/* ─── Per-Page Overrides ──────────────────────────────── */
+/* Home */
 body.home-page {
-  --page-bg: var(--page-bg-home);
-  --banner-text: var(--banner-text-home);
+  --page-bg:      var(--page-bg-home);
+  --banner-text:  var(--banner-text-home);
 }
-/* Skills page */
+/* About */
+body.about-page {
+  --page-bg:      var(--page-bg-about);
+  --banner-text:  var(--banner-text-about);
+}
+/* Skills */
 body.skills-page {
-  --page-bg: var(--page-bg-skills);
-  --banner-text: var(--banner-text-skills);
+  --page-bg:      var(--page-bg-skills);
+  --banner-text:  var(--banner-text-skills);
 }
-/* Projects page */
+/* Projects */
 body.projects-page {
-  --page-bg: var(--page-bg-projects);
-  --banner-text: var(--banner-text-projects);
+  --page-bg:      var(--page-bg-projects);
+  --banner-text:  var(--banner-text-projects);
+}
+/* Contact */
+body.contact-page {
+  --page-bg:      var(--page-bg-contact);
+  --banner-text:  var(--banner-text-contact);
+}
+
+/* ─── Force-override Contact panel (higher specificity) ── */
+.site-content main.contact-page {
+  /* this will beat the generic `.contact-page { background: #f7f7f2 }` in your style.css */
+  background-color: var(--page-bg);
+  color:            var(--banner-text);
 }
 
 /* ─── Skills Specific Overrides ───────────────────────── */
 /* Sidebar skill cards */
-.skills-sidebar .skill-card {
-  background-color: var(--skill-sidebar-bg);
-}
-/* Detail‐pane cards */
-.skills-detail .detail-card {
-  background-color: var(--skill-detail-bg);
-}
-/* Progress‐bar fill */
-.progress-bar {
-  background-color: var(--progress-fill);
-}
+.skills-sidebar .skill-card { background-color: var(--skill-sidebar-bg) }
+/* Detail-pane cards */
+.skills-detail .detail-card { background-color: var(--skill-detail-bg) }
+/* Progress-bar fill */
+.progress-bar { background-color: var(--progress-fill) }
 
 /* ─── Project Card Helpers ───────────────────────────── */
-/* Example: “Contact Me” card */
-.project-card--contact {
-  background-color: var(--project-card-contact-bg);
-  color: var(--project-card-text-dark);
+/* Contact Me card */
+.project-card--contact { background-color: var(--project-card-contact-bg); color: var(--project-card-text-dark) }
+/* JS card */
+.project-card[data-category="js"] { background-color: var(--project-card-js-bg); color: var(--project-card-text-dark) }
+/* Light-text variant */
+.project-card.light-text { color: var(--project-card-text-light) }
+
+/* ─── About Page Story Sections ───────────────────────── */
+main.about-page {
+  padding-top: 6rem; /* clear fixed header */
 }
-/* Example: JavaScript project card */
-.project-card[data-category="js"] {
-  background-color: var(--project-card-js-bg);
-  color: var(--project-card-text-dark);
+.story-section {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #FFF;
+  border-radius: .5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+.story-section:nth-child(even) { flex-direction: row-reverse }
+.story-content { flex: 1; padding: 1rem }
+.story-content h2, .story-content p { color: var(--banner-text) }
+.story-image { flex: 1; padding: 1rem }
+.story-image img {
+  width: 100%;
+  border-radius: .5rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
-/* If you need a light‐text card on the dark background: */
-.project-card.light-text {
-  color: var(--project-card-text-light);
+/* ─── Footer ───────────────────────────────────────────── */
+footer {
+  width: 100%;
+  align-self: stretch;
+  background-color: #000;
+  padding: 2rem 0;
+  text-align: center;
+}
+.footer-icons a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color .3s, transform .3s;
+}
+.footer-icons a:hover { color: #777; transform: translateY(-3px) }
+
+/* ─── Responsive tweaks ───────────────────────────────── */
+@media (max-width: 768px) {
+  header { padding: 1rem 2rem }
+  main.about-page,
+  .home,
+  .site-content main.contact-page { padding: 6rem 2rem 2rem }
+  .story-section { flex-direction: column }
+}
+
+/* ─── Restore Project Cards to white boxes ─────────────── */
+main.projects-page .project-card {
+  background-color: #fff;
+}
+main.projects-page .project-card h3,
+main.projects-page .project-card p {
+  color: #1e1e24;
+}
+main.projects-page .project-card .card-btns .btn {
+  background-color: var(--btn-bg);
+  color:            var(--btn-text);
 }

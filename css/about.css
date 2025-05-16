@@ -1,0 +1,37 @@
+/* ─── About Page Story Sections ───────────────────────── */
+main.about-page {
+  padding-top: 6rem; /* so you sit below the fixed nav */
+}
+
+.story-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 4rem 0;
+  padding: 2rem;
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* odd rows white, even rows soft tint */
+.story-section:nth-child(odd) {
+  background-color: var(--about-story-bg-odd);
+}
+.story-section:nth-child(even) {
+  background-color: var(--about-story-bg-even);
+}
+
+/* text colors */
+.story-content h2 {
+  color: var(--banner-text-about);
+}
+.story-content p {
+  color: var(--color-text);
+}
+
+/* image framing */
+.story-image img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-light);
+}

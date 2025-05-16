@@ -115,7 +115,7 @@ header {
 }
 
 /* ─── Contact Page ───────────────────────────────────────── */
-.contact-page {
+main.contact-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex: 1;                 /* fill available vertical space */
@@ -126,7 +126,7 @@ header {
   gap: 2rem;
 }
 @media (max-width: 768px) {
-  .contact-page {
+  main.contact-page {
     grid-template-columns: 1fr;
     padding: 2rem;
   }
@@ -142,7 +142,8 @@ header {
 }
 .img-strip img {
   width: 100%;
-  height: 100%;
+  height: auto;      
+  max-height: 80vh;     
   object-fit: cover;
   display: block;
 }
@@ -167,22 +168,22 @@ header {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #000000;
+  border: 1px solid #000000;
   padding: 0.8rem 1rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
-  color: #1e1e24;
+  color: #ffffff;
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #888;
+  color: #c7c7c7;
 }
 .contact-form textarea {
   min-height: 150px;
 }
 .contact-form .btn {
-  background-color: #1e1e24;
+  background-color: #000000;
   color: #fff;
   border: none;
   padding: 0.8rem 2rem;
@@ -255,13 +256,18 @@ header {
 }
 
 /* ─── About Page ─────────────────────────────────────────── */
-.about-page {
+main.about-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 4rem 4rem;
-  background: #f7f7f2;
 }
+
+/* make space under the fixed header */
+main.about-page {
+  padding-top: 6rem;
+}
+
 .story-section {
   display: flex;
   align-items: center;
@@ -306,6 +312,7 @@ footer {
   background-color: #000;
   padding: 2rem 0;
   text-align: center;
+  margin-top: auto;
 }
 .footer-icons a {
   margin: 0 1rem;

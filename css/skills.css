@@ -119,3 +119,21 @@ main.skills-page {
     padding: 1.5rem;
   }
 }
+
+/* ─── “View Projects” Button in Skills Detail ─────────── */
+.detail-card .btn {
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.detail-card .btn:hover {
+  background-color: rgba(30, 42, 56, 0.85);
+  transform: translateY(-1px);
+}
+
